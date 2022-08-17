@@ -55,10 +55,25 @@ def create_app(test_config=None):
         )
 
     # @TODO: Write a route that will update a single book's rating.
-    #         It should only be able to update the rating, not the entire representation
-    #         and should follow API design principles regarding method and route.
-    #         Response body keys: 'success'
-    # TEST: When completed, you will be able to click on stars to update a book's rating and it will persist after refresh
+    @app.route("/books/<int:book_id>", methods=["PATCH"])
+    def update_book(book_id):
+
+        body = request.get_json()
+
+        try:
+            book = Book.query.filter(Book.id == book_id).one_or_none()
+            if book is None:
+                abort(404)
+
+            if "rating" in body:
+                book.rating = int(body.get("rating"))
+
+            book.update()
+
+            return jsonify({"success": True, "id": book.id})
+
+        except:
+            abort(400)
 
     # @TODO: Write a route that will delete a single book.
     #        Response body keys: 'success', 'deleted'(id of deleted book), 'books' and 'total_books'
