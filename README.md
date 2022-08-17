@@ -60,7 +60,7 @@ In your terminal, navigate to the */nd0044-c2-API-Development-and-Documentation-
 ```bash
 cd nd0044-c2-API-Development-and-Documentation-exercises/1_Requests_Starter/backend
 # Connect to the PostgreSQL
-psql postgres
+psql postgres or try it psql -U postgres -h localhost postgres
 #View all databases
 \l
 # Create the database, create a user - `student`, grant all privileges to the student
