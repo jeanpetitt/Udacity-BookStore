@@ -134,7 +134,7 @@ def create_app(test_config=None):
         return jsonify({
         "success": False,
         "error": 404,
-        "message": "Object Not found"
+        "message": "ressource Not found"
         }), 404
     
     @app.errorhandler(400)
