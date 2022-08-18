@@ -7,14 +7,18 @@ Les développeurs utilisant ce projet doivent déjà avoir Python3, pip et node 
 #### Backend
 Depuis le dossier backend executer `pip3 intall -r requirements.txt`. tous les packages requis sont inclus dans le fichier requirements.txt
 pour lancer cette application executer les commandes suivant:
-  - pour les utilisateurs windows
+  - pour les utilisateurs windows:
+```
   set FLASK_APP=flaskr
   set FLASK_ENV=development
   flask run
-  - pour les utilisateur linux
+```
+  - pour les utilisateur linux:
+```  
   export FLASK_APP=flaskr
   export FLASK_ENV=development
   flask run
+```  
 Ces commandes mettent l'application en développement et ordonnent à notre application d'utiliser le fichier '__init__.py' dans notre dossier flaskr. Travailler en mode développement affiche un débogueur interactif dans la console et redémarre le serveur chaque fois que des modifications sont apportées. L'application est exécutée sur 'http://127.0.0.1:5000/' par défaut et est un proxy dans la configuration frontend.
 
 #### Frontend
