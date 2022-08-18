@@ -30,7 +30,15 @@ Pour exécuter des tests, accédez au dossier principal et exécutez les command
 ```
 dropdb bookshelf_test
 createdb bookshelf_test
+```
+```
 psql bookshelf_test < books.psql
+```
+or 
+```
+psql bookshelf_test < books.psql -U student -h localhost bookshelf_test
+```
+```
 python test_flaskr.py
 ```
 La première fois que vous exécutez les tests, omettez la commande dropdb.
