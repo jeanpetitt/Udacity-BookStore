@@ -1,10 +1,43 @@
-## Udacity-BookStore
-  - Udacity-BookStore est une application permettant aux etudiant de
-  Udacity, de consulter la lister des livres disponible, poster un livre, 
+# Udacity-BookStore
+  - Udacity-BookStore est une bibliotheque virtuelle pour les etudiants udacity leur permettant de consulter la lister des livres disponible, poster un livre, 
   rechercher un livre, mettre a jour les informations concernant un livre et de le supprimer
+## pour commencer
+### Pre-requis Developement local
+Les développeurs utilisant ce projet doivent déjà avoir Python3, pip et node installés sur leurs machines locales
+#### Backend
+Depuis le dossier backend executer `pip3 intall -r requirements.txt`. tous les packages requis sont inclus dans le fichier requirements.txt
+pour lancer cette application executer les commandes suivant:
+  - pour les utilisateurs windows
+  set FLASK_APP=flaskr
+  set FLASK_ENV=development
+  flask run
+  - pour les utilisateur linux
+  export FLASK_APP=flaskr
+  export FLASK_ENV=development
+  flask run
+Ces commandes mettent l'application en développement et ordonnent à notre application d'utiliser le fichier '__init__.py' dans notre dossier flaskr. Travailler en mode développement affiche un débogueur interactif dans la console et redémarre le serveur chaque fois que des modifications sont apportées. L'application est exécutée sur 'http://127.0.0.1:5000/' par défaut et est un proxy dans la configuration frontend.
 
-### pour commencer
-- URL de base : à l'heure actuelle, cette application ne peut être exécutée que localement et n'est pas hébergée en tant qu'URL de base. L'application backend est hébergée par défaut, 'http://127.0.0.1:5000/', qui est définie comme proxy dans la configuration frontale. - Authentification : Cette version de l'application ne nécessite pas d'authentification ou de clés API.. 
+#### Frontend
+Depuis le dossier frontend, executer les commandes suivantes pour lancer le client frontend:
+```
+npm install // only once to install dependencies
+npm start 
+```
+
+par defaut, le frontend se lancera sur localhost:3000. 
+### Tests
+Pour exécuter des tests, accédez au dossier principal et exécutez les commandes suivantes :
+```
+dropdb bookshelf_test
+createdb bookshelf_test
+psql bookshelf_test < books.psql
+python test_flaskr.py
+```
+La première fois que vous exécutez les tests, omettez la commande dropdb.
+
+Tous les tests sont conservés dans ce fichier et doivent être maintenus au fur et à mesure que des mises à jour sont apportées aux fonctionnalités de l'application.
+
+## pour commencer
 
 ### Error Handling
 Les erreurs sont renvoyées sous forme d'objets JSON au format suivant :
