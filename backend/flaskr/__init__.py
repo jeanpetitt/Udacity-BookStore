@@ -129,6 +129,19 @@ def create_app(test_config=None):
         except:
             abort(422)
             
+    @app.route('/books/search', methods=['POST'])
+    def search_books():
+        body = request.get_json()
+        title = body.get("title", None)
+        result = Book.query.filter(Book.title.ilike(f'%{title}%')).order_by(Book.id).all()
+        current_books = paginate_books(request, result)
+        
+        return jsonify({
+            'success': True,
+            'books': current_books,
+            'count': len(result),
+        })
+            
     @app.errorhandler(404)
     def not_found(error):
         return jsonify({
@@ -152,6 +165,5 @@ def create_app(test_config=None):
         "error": 422,
         "message": "unprocessable"
         }), 422
-    
     
     return app
