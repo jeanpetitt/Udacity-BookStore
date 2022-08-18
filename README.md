@@ -167,7 +167,7 @@ L'API renvoie trois types d'erreur lorsque les demandes échouent:
 #### POST /books/search
 -Generalites:
    - afficher la liste des livres dont le titre correspond(non sensible a la casse) au mot envoyer via la methode post du user
-- `curl -X POST http://127.0.0.1:5000//books/search` -H "Content-Type: application/json" -d '{"title":"rachel kushner"}'
+- `curl  http://127.0.0.1:5000//books/search -X POST -H "Content-Type: application/json" -d '{"title":"rachel kushner"}'`
 ```
 {
   "books": [{
@@ -179,3 +179,4 @@ L'API renvoie trois types d'erreur lorsque les demandes échouent:
   "success": true,
   "count": 1
 }
+```
