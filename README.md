@@ -1,5 +1,5 @@
 # Udacity-BookStore
-  - Udacity-BookStore est une bibliotheque virtuelle pour les etudiants udacity leur permettant de consulter la lister des livres disponible, poster un livre, 
+  - Udacity-BookStore est une bibliotheque numerique pour les etudiants udacity. leur permettant de consulter la liste des livres disponible, poster un livre, 
   rechercher un livre, mettre a jour les informations concernant un livre et de le supprimer
 ## pour commencer
 ### Pre-requis Developement local
