@@ -1,4 +1,4 @@
-## API Reference
+## Udacity-BookStore
 
 ### pour commencer
 - URL de base : à l'heure actuelle, cette application ne peut être exécutée que localement et n'est pas hébergée en tant qu'URL de base. L'application backend est hébergée par défaut, 'http://127.0.0.1:5000/', qui est définie comme proxy dans la configuration frontale. - Authentification : Cette version de l'application ne nécessite pas d'authentification ou de clés API.. 
