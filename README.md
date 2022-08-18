@@ -228,3 +228,7 @@ L'API renvoie trois types d'erreur lorsque les demandes échouent:
   "count": 1
 }
 ```
+## Deployement N/A
+
+## Autheur
+Jean Petit, etudiant a udacity 
